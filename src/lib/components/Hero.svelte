@@ -3,14 +3,6 @@
 
   let visible = $state(false);
 
-  function scrollTo(id: string) {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      window.scrollBy(0, -56);
-    }
-  }
-
   $effect(() => {
     const raf = requestAnimationFrame(() => { visible = true; });
     return () => cancelAnimationFrame(raf);
@@ -40,13 +32,13 @@
     </p>
 
     <div class="hero-cta-row" class:hero-cta-row--visible={visible}>
-      <button onclick={() => scrollTo('proof')} class="hero-btn hero-btn--solid">
+      <a href="#proof" class="hero-btn hero-btn--solid">
         View Projects
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-      </button>
-      <button onclick={() => scrollTo('work')} class="hero-btn hero-btn--outline">
+      </a>
+      <a href="#work" class="hero-btn hero-btn--outline">
         Get in Touch
-      </button>
+      </a>
     </div>
   </div>
 </section>
