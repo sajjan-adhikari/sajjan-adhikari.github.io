@@ -1,31 +1,6 @@
 <script>
   import { fadeUp } from '$lib/actions.js';
-
-  const links = [
-    {
-      href: 'mailto:sajjanadhikari0@gmail.com',
-      label: 'Email',
-      value: 'sajjanadhikari0@gmail.com',
-      iconBg: 'bg-cyan/10 text-cyan',
-      icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>`,
-    },
-    {
-      href: 'https://github.com/sajjan-adhikari',
-      label: 'GitHub',
-      value: 'github.com/sajjan-adhikari',
-      external: true,
-      iconBg: 'bg-card text-muted',
-      icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>`,
-    },
-    {
-      href: 'https://linkedin.com/in/sajjanadhikari',
-      label: 'LinkedIn',
-      value: 'linkedin.com/in/sajjanadhikari',
-      external: true,
-      iconBg: 'bg-blue/10 text-blue',
-      icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>`,
-    },
-  ];
+  import { github, linkedin } from '$lib/icons.js';
 
   const openFor = [
     'SOC Analyst (L1 / L2)',
@@ -35,66 +10,101 @@
   ];
 </script>
 
-<section id="contact" class="py-28 bg-bg">
+<section id="work" class="py-16 md:py-28 bg-bg">
   <div class="max-w-[1100px] mx-auto px-6">
 
-    <div use:fadeUp class="mb-14">
-      <p class="text-[0.72rem] font-semibold text-cyan tracking-[0.15em] uppercase mb-3">Contact</p>
-      <h2 class="text-[2.2rem] font-bold text-ink tracking-[-0.02em]">Get in Touch</h2>
-    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-    <div class="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-12 lg:gap-16 items-start">
-
-      <!-- Left: intro -->
-      <div use:fadeUp={80}>
-        <p class="text-[1.05rem] text-muted leading-[1.85] mb-8">
+      <div use:fadeUp class="card p-6 md:p-8 flex flex-col gap-5">
+        <div>
+          <p class="section-label">Work with me</p>
+          <h2 class="section-title">Get in touch</h2>
+        </div>
+        <p class="text-[0.92rem] text-muted leading-relaxed">
           I'm actively looking for opportunities to grow as a security professional.
           Whether it's an internship, entry-level SOC role, or a collaborative project — I'd love to connect.
         </p>
-
-        <div class="bg-card border border-line rounded-2xl p-6 card-shadow">
-          <p class="text-[0.68rem] font-semibold text-dim uppercase tracking-[0.14em] mb-5">Open For</p>
-          <div class="flex flex-col gap-0">
-            {#each openFor as item}
-              <div class="flex items-center gap-3 py-3 border-b border-line last:border-0">
-                <svg class="w-4 h-4 text-cyan flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
-                <span class="text-[0.88rem] text-muted">{item}</span>
-              </div>
-            {/each}
-          </div>
+        <div class="flex flex-wrap gap-2 mt-auto">
+          {#each openFor as item}
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[0.78rem] text-muted bg-bg border border-line">
+              <svg class="w-3 h-3 text-teal flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+              {item}
+            </span>
+          {/each}
         </div>
-
-        <p class="text-[0.78rem] text-dim mt-6 leading-[1.7]">
-          Based in Lalitpur, Nepal · Available remotely · Fluent in English (C2)
-        </p>
       </div>
 
-      <!-- Right: links -->
-      <div use:fadeUp={160} class="flex flex-col gap-3">
-        {#each links as link, i}
+      <div class="grid grid-rows-2 gap-4">
+        <div use:fadeUp={80} class="card p-6 md:p-8 flex flex-col gap-4">
+          <div class="flex items-center gap-4">
+            <div class="w-11 h-11 rounded-xl bg-teal/10 border border-teal/20 flex items-center justify-center text-teal flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="min-w-0">
+              <p class="text-[0.7rem] font-semibold text-dim uppercase tracking-wider mb-0.5">Email</p>
+              <p class="text-[0.92rem] font-medium text-ink truncate">sajjanadhikari0@gmail.com</p>
+            </div>
+          </div>
           <a
-            href={link.href}
-            target={link.external ? '_blank' : undefined}
-            rel={link.external ? 'noopener noreferrer' : undefined}
-            use:fadeUp={180 + i * 55}
-            class="group bg-card border border-line rounded-2xl p-5 flex items-center gap-4 card-shadow hover:card-shadow-hover hover:-translate-y-0.5 hover:border-muted/30 transition-all duration-300"
+            href="mailto:sajjanadhikari0@gmail.com"
+            class="btn-primary inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-[0.85rem] font-semibold text-bg"
           >
-            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 {link.iconBg}">
-              {@html link.icon}
-            </div>
-            <div class="flex-1 min-w-0">
-              <p class="text-[0.7rem] font-semibold text-dim uppercase tracking-[0.1em] mb-0.5">{link.label}</p>
-              <p class="text-[0.9rem] font-medium text-ink truncate">{link.value}</p>
-            </div>
-            <svg class="w-4 h-4 text-dim group-hover:text-muted group-hover:translate-x-0.5 transition-all duration-200 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-            </svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            Send message
           </a>
-        {/each}
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          {#each [{ href: 'https://github.com/sajjan-adhikari', label: 'GitHub', value: 'github.com/sajjan-adhikari', icon: github }, { href: 'https://linkedin.com/in/sajjanadhikari', label: 'LinkedIn', value: 'linkedin.com/in/sajjanadhikari', icon: linkedin }] as link, i}
+            <a
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              use:fadeUp={140 + i * 40}
+              class="group card p-5 md:p-6 flex flex-col items-center justify-center gap-3 h-full text-center"
+            >
+              <div class="w-10 h-10 rounded-xl bg-bg border border-line flex items-center justify-center text-dim/70 group-hover:text-teal transition-colors duration-200">
+                {@html link.icon}
+              </div>
+              <div>
+                <p class="text-[0.7rem] font-semibold text-dim mb-0.5">{link.label}</p>
+                <p class="text-[0.82rem] font-medium text-ink">{link.value}</p>
+              </div>
+            </a>
+          {/each}
+        </div>
       </div>
 
     </div>
+
+    <div use:fadeUp={200} class="mt-4 card p-4 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2 text-[0.78rem] text-dim">
+        <svg class="w-3.5 h-3.5 text-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Lalitpur, Nepal
+      </div>
+      <div class="flex items-center gap-2 text-[0.78rem] text-dim">
+        <svg class="w-3.5 h-3.5 text-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        Available for remote
+      </div>
+      <div class="flex items-center gap-2 text-[0.78rem] text-dim">
+        <svg class="w-3.5 h-3.5 text-teal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        English (C2)
+      </div>
+    </div>
+
   </div>
 </section>
+
+<style>
+  .btn-primary {
+    background: linear-gradient(135deg, var(--color-teal), var(--color-teal-dim));
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px color-mix(in srgb, var(--color-teal) 30%, transparent);
+  }
+  .btn-primary:active {
+    transform: translateY(0);
+  }
+</style>
