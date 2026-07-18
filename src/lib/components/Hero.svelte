@@ -17,9 +17,9 @@
   <div class="hero-overlay"></div>
 
   <div class="hero-body">
-    <a href="/resume" class="hero-badge" class:hero-badge--visible={visible}>
+    <span class="hero-badge" class:hero-badge--visible={visible}>
       Open to SOC Analyst opportunities
-    </a>
+    </span>
 
     <h1 class="hero-name" class:hero-name--visible={visible}>Sajjan Adhikari</h1>
 
