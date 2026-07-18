@@ -2,7 +2,7 @@
 
 A premium, interactive, and responsive cybersecurity portfolio website built to showcase skills, credentials, and hands-on laboratory projects in Security Operations (SOC), threat detection, and offensive security.
 
-Live site hosted at: **[sajjan-adhikari.github.io](https://sajjan-adhikari.github.io)**
+Live sites: **[sajjanadhikari.com.np](https://sajjanadhikari.com.np)** · **[sajjan-adhikari.github.io](https://sajjan-adhikari.github.io)**
 
 ---
 
@@ -58,11 +58,7 @@ Make sure you have Node.js (version 20 or 24 recommended) and `pnpm` installed.
 
 ## 📦 Deployment to GitHub Pages
 
-The portfolio is preconfigured for zero-friction static deployment utilizing **GitHub Actions**:
+Deploys automatically via **GitHub Actions** on every push to `main`. The workflow at `.github/workflows/deploy.yml` builds with `adapter-static` and publishes the `build/` directory to Pages.
 
-1. **Deploy Workflow:** The pipeline at `.github/workflows/deploy.yml` triggers automatically whenever you push code changes to the `main` or `master` branch. It compiles the static files and generates `build/404.html` fallback assets.
-2. **Jekyll Bypass:** The project contains a `static/.nojekyll` bypass configuration to ensure GitHub Pages does not ignore underscore directory assets (such as `_app/`).
-3. **Repository Settings:**
-   * Go to your repository settings on GitHub.
-   * Navigate to **Pages** in the left sidebar menu.
-   * Under **Build and deployment > Source**, set the dropdown source choice to **GitHub Actions**.
+**Required repo settings:**
+- Pages → Source → **GitHub Actions** (not "Deploy from a branch")
