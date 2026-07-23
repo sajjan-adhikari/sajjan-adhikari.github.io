@@ -40,7 +40,7 @@
       <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
         {#each [
           { n: '6', l: 'Security projects' },
-          { n: '4+', l: 'Certifications' },
+          { n: '6', l: 'Certifications' },
           { n: 'C2', l: 'English proficiency' },
           { n: '5', l: 'Core competencies' },
         ] as stat}
