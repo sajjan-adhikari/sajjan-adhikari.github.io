@@ -26,6 +26,12 @@
       skills: ['Splunk SPL', 'Python Scripting', 'Bash Scripting', 'Git', 'Linux CLI', 'Markdown Reporting'],
       tools: ['Splunk', 'Python', 'Bash', 'Git', 'Linux CLI'],
     },
+    {
+      label: 'Systems Administration',
+      icon: 'server',
+      skills: ['Active Directory', 'Group Policy (GPO)', 'DNS Management', 'DHCP Configuration', 'File Server Admin'],
+      tools: ['Windows Server', 'VirtualBox', 'NTFS'],
+    },
   ];
 
   const icons = {
@@ -33,6 +39,7 @@
     target: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
     network: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg>',
     code: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>',
+    server: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="6" rx="1.5"/><rect x="2" y="15" width="20" height="6" rx="1.5"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/><line x1="10" y1="6" x2="14" y2="6"/><line x1="10" y1="18" x2="14" y2="18"/></svg>',
   };
 </script>
 
