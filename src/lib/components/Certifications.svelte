@@ -9,14 +9,13 @@
 
   const earned = [
     { svg: googleSvg, name: 'Google Cybersecurity Certificate', issuer: 'Google' },
+    { text: 'IBM',  name: 'Cybersecurity Analyst Certificate', issuer: 'IBM' },
+    { text: 'ISC²', name: 'Certified in Cybersecurity (CC)', issuer: 'ISC²' },
     { svg: ciscoSvg,  name: 'Junior Cybersecurity Analyst', issuer: 'Cisco' },
     { svg: splunkSvg, name: 'Splunk Core Certified User', issuer: 'Splunk' },
+    { svg: ciscoSvg,  name: 'Cisco Ethical Hacker', issuer: 'Cisco' },
+    { svg: ciscoSvg,  name: 'Introduction To Cybersecurity', issuer: 'Cisco' },
     { text: 'EF', name: 'EF SET C2 Proficient', issuer: 'EF SET' },
-  ];
-
-  const inProgress = [
-    { text: 'ISC²', name: 'Certified in Cybersecurity (CC)', issuer: 'ISC²' },
-    { text: 'IBM',  name: 'Cybersecurity Analyst Certificate', issuer: 'IBM' },
   ];
 </script>
 
