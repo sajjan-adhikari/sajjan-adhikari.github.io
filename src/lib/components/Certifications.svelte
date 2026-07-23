@@ -51,7 +51,7 @@
       </div>
     </div>
 
-    <div use:fadeUp={160}>
+    <!-- <div use:fadeUp={160}>
       <p class="text-[0.78rem] font-semibold text-dim uppercase tracking-wider mb-4">In progress</p>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[540px]">
         {#each inProgress as cert, i}
@@ -67,7 +67,7 @@
           </div>
         {/each}
       </div>
-    </div>
+    </div> -->
 
   </div>
 </section>
